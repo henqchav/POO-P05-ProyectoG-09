@@ -1,3 +1,4 @@
+package modelo;
 public class Concurso{
 	private String nombre; //Nombre del concurso
 	private String fechaEvento; //Fecha del evento

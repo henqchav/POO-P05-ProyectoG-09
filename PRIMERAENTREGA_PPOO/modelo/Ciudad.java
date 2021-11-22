@@ -1,3 +1,4 @@
+package modelo;
 public class Ciudad{
 	private String nombre; //Nombre de la ciudad
 	private String provincia; //Provincia de la ciudad

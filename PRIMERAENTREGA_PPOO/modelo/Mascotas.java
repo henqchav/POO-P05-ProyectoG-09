@@ -1,3 +1,4 @@
+package modelo;
 import Dueno.java;
 public class Mascota{
 	private String nombre; //Nombre de la mascota

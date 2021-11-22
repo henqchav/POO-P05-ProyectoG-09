@@ -1,3 +1,4 @@
+package modelo;
 public class Dueno{
 	private cedula; //Cedula de identidad del dueño
 	private nombres; //Nombres del dueño
