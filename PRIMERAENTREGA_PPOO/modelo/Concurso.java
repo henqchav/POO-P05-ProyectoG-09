@@ -17,7 +17,7 @@ public class Concurso{
 	}
 	//metodo setNombre asgina un nombre al concurso
 	public void setNombre(String n){
-		nombre=n
+		nombre=n;
 	}
 
 	//metodo getFechaEvento retorna la fecha del evento
@@ -26,7 +26,7 @@ public class Concurso{
 	}
 	//metodo setFechaEvento asigna la fecha del evento al concurso
 	public void setFechaEvento(String f){
-		fechaEvento=f
+		fechaEvento=f;
 	}
 	//metodo getInicioInscripcion retorna la fecha de inicio de inscripcion
         public String getInicioInscripcion(){
@@ -34,7 +34,7 @@ public class Concurso{
         }
         //metodo setInicioInscrpcion asigna la fecha de inicio de incripcion al concurso
         public void setFechaEvento(String i){
-                inicioInscripcion=i
+                inicioInscripcion=i;
         }
 	//metodo getCierreInscripcion retorna la fecha de cierre de Inscripcion del evento
         public String getCierreInscripcion(){
@@ -42,7 +42,7 @@ public class Concurso{
         }
         //metodo setCierreInscripcion asigna la fecha de cierre de inscrpciones del concurso
         public void setCierreInscripcion(String c){
-                cierreInscripcion=c
+                cierreInscripcion=c;
         }
 	//metodo getCiudad retorna la ciudad del evento
         public String getCiudad(){
@@ -50,7 +50,7 @@ public class Concurso{
         }
         //metodo setCiudad asigna la ciudad del concurso
         public void setCiudad(String ciu){
-                ciudad=ciu
+                ciudad=ciu;
         }
 	//metodo getNombre retorna la fecha del evento
         public String getFechaEvento(){
@@ -58,7 +58,7 @@ public class Concurso{
         }
         //metodo setFechaEvento asigna la fecha del evento al concurso
         public void setFechaEvento(String f){
-                fechaEvento=f
+                fechaEvento=f;
         }
 	//metodo getLugar retorna el lugar del evento
 	public String getLugar(){
@@ -66,7 +66,7 @@ public class Concurso{
 	}
 	//metodo setLugar asigna el lugar del concurso
 	public void setLugar(String l){
-		lugar=l
+		lugar=l;
 	}
 	public Concurso(String nombre,String fechaEvento,String horaEvento,String inicioInscripcion,String cierreInscripcion,String ciudad,String lugar,String premios,String Auspiciantes,boolean EsPerro){
 		this.nombre=nombre;
