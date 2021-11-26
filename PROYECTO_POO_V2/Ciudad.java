@@ -19,6 +19,7 @@ public class Ciudad{
 	public String getCodigo(){
 		return codigo;
 	}
+	@Override
 	public String toString(){
 		return "Nombre: "+nombre+"\nProvincia: "+provincia+"\nCodigo: "+codigo;
 	}
