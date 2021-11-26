@@ -5,7 +5,7 @@ public class Mascota{
 	private String raza; //Raza del perro
 	private String fechaNacimiento; //Fecha de nacimiento de la mascota
 	private String foto; //Foto de la mascota
-	private String Dueno; //Dueño de la mascota
+	private String duenio; //Dueño de la mascota
 
 	//metodo getNombre retorna el nombre de la mascota
 	public String getNombre(){
@@ -20,11 +20,14 @@ public class Mascota{
 		return fechaNacimiento;
 	}
 	//Se crea la mascota
-	public Mascota(String nombre,boolean EsPerro,String raza,String foto,String dueno){
+	public Mascota(String nombre,boolean EsPerro,String raza,String foto,String duenio){
 		this.nombre=nombre;
 		this.EsPerro=EsPerro;
 		this.raza=raza;
 		this.foto=foto;
-		this.dueno=dueno;
+		this.duenio=duenio;
+	}
+	public String toString(){
+		return "Nombre: " +nombre+"\nEs perro: "+EsPerro+"\nRaza: "+raza+"\nFecha de nacimiento"+fechaNacimiento+"\nFoto: "+foto+"\nDueño: "+duenio;
 	}
 }
