@@ -27,6 +27,7 @@ public class Mascota{
 		this.foto=foto;
 		this.duenio=duenio;
 	}
+	@Override
 	public String toString(){
 		return "Nombre: " +nombre+"\nEs perro: "+EsPerro+"\nRaza: "+raza+"\nFecha de nacimiento"+fechaNacimiento+"\nFoto: "+foto+"\nDueño: "+duenio;
 	}
