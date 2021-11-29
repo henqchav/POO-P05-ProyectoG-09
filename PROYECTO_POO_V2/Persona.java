@@ -14,17 +14,32 @@ public abstract class Persona{
   public String getDireccion(){
     return direccion;
   }
+  public String setDireccion(String d){
+	  direccion=d
+  }
   public String getTelefono(){
     return telefono;
+  }
+  public void setTelefono(String t){
+	  telefono=t;
   }
   public String getCiudad(){
     return ciudad;
   }
+  public void setCiudad(String ciu){
+	  ciudad=ciu;
+  }
   public String getEmail(){
     return email;
   }
+  public void setEmail(String e){
+	  email=e;
+  }
   public String getCodigo(){
     return codigo;
+  }
+  public void setCodigo(String cod){
+	  codigo=cod;
   }
   //constructor de Persona
   public Persona(String n, String d, String t, String ciu,String e, String cod){
