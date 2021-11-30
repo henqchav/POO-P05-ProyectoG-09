@@ -15,8 +15,83 @@ class Main {
 
 
   public static void main(String[] args) {
+	  //cargo las ciudades
+	  Ciudad ciudad1 = new Ciudad("Guayaquil","Guayas","1010");
+          Ciudad ciudad2 = new Ciudad("Quito","Pichincha","2020");
+          Ciudad ciudad3 = new Ciudad("Cuenca","Azuay","3030");
+          ciudades.add(ciudad1);
+          ciudades.add(ciudad2);
+          ciudades.add(ciudad3);
+          //cargo los auspiciantes
+          Auspiciante auspi1 = new Auspiciante("Antonio","El oro","094343","Guayaquil","Antoni@hotmail.com","1010","www.ayudaperro.com");
+          Auspiciante auspi2 = new Auspiciante("Sara","centro","094343","Guayaquil","Sara@hotmail.com","1010","www.ayudamascotas.com");
+          Auspiciante auspi3 = new Auspiciante("Oscar","Av las americas","094343","Guayaquil","Oscar@hotmail.com","1010","www.cuidadocanino.com");
+          auspiciantes.add(auspi1);
+          auspiciantes.add(auspi2);
+          auspiciantes.add(auspi3);
+          //cargo las mascotas
+          Mascota m1 = new Mascota(1,"Coco", "perro", "Poodle","14-07-2015","","Pepe");
+          Mascota m2 = new Mascota(2,"Thor", "perro", "Schnoodle","02-08-2017","","Juan");
+          Mascota m3 = new Mascota(3,"Max", "perro", "Kangal turco","30-04-2018","","Jose");
+          Mascota m4 = new Mascota(4,"Toby", "perro", "Corgi galés","25-09-2014","","Pedro");
+          Mascota m5 = new Mascota(5,"Simba", "perro", "xoloitzcuintle","02-08-2017","","Anibal");
+          Mascota m6 = new Mascota(6,"Leo", "perro", "Piccolo lebrel","25-07-2019","","Ricardo");
+          Mascota m7 = new Mascota(7,"Lucas", "perro", "Bullmastiff","24-08-2020","","Lulu");
+          Mascota m8 = new Mascota(8,"Zeus", "perro", "pug","17-10-2017","","Jodie");
+          Mascota m9 = new Mascota(9,"Canela", "perro", "Braco alemán","14-11-2015","","Ana");
+          Mascota m10 = new Mascota(10,"Bruno", "perro", "Pachón Navarro","31-12-2018","","Patty");
+          Mascota m11 = new Mascota(10,"Gnar", "perro", "Golden","25-01-2019","","Juan");
+          Mascota m12 = new Mascota(10,"Corki", "perro", "Pastor Aleman","13-02-2014","","Patty");
+          Mascota m13 = new Mascota(10,"Singed", "perro", "Boxer","04-06-2019","","Ricardo");
+          Mascota m14 = new Mascota(10,"Warwick", "perro", "Pomerania","12-04-2020","","Jodie");
+          Mascota m15 = new Mascota(10,"Yone", "perro", "Pachón Navarro","30-08-2017","","Patty");
+          listmascotas.add(m1);
+          listmascotas.add(m2);
+          listmascotas.add(m3);
+          listmascotas.add(m4);
+          listmascotas.add(m5);
+          listmascotas.add(m6);
+          listmascotas.add(m7);
+          listmascotas.add(m8);
+          listmascotas.add(m9);
+          listmascotas.add(m10);
+          listmascotas.add(m11);
+          listmascotas.add(m12);
+          listmascotas.add(m13);
+          listmascotas.add(m14);
+          listmascotas.add(m15);
+          //cargo los dueños
+          Duenio d1 = new Duenio("Pepe","Enrique Segoviano","0998746125", "peense@hotmail.com","Guayaquil","1","0965478123","Lopez");
+          Duenio d2 = new Duenio("Juan","Sauces 7","0986312541", "jusa7e@hotmail.com","Guayaquil","2","0946132507","Lopez");
+          Duenio d3 = new Duenio("Jose","Alborada 4ta Etapa","0987452106", "joal4@hotmail.com","Guayaquil","3","0978463102","Lopez");
+          Duenio d4 = new Duenio("Pedro","15 y Calicuchima","0976481320", "peca15@hotmail.com","Guayaquil","4","0987653214","Lopez");
+          Duenio d5 = new Duenio("Anibal","San roque","0986531745", "ansan@hotmail.com","Quito","5","0875632140","Lopez");
+         Duenio d6 = new Duenio("Ricardo","Av. 10 de Agosto","0987645310", "riav@hotmail.com","Quito","6","0984512047","Lopez");
+         Duenio d7 = new Duenio("Lulu","Carlos Aguilar V","0987301654", "luen@hotmail.com","Guayaquil","7","0987541206","Lopez");
+         Duenio d8 = new Duenio("Jodie","Carlos III","0986320475", "joen@hotmail.com","Guayaquil","8","0984563215","Lopez");
+         Duenio d9 = new Duenio("Ana","Mapasingue Oeste","0985276031", "anen@hotmail.com","Guayaquil","9","0978652301","Lopez");
+         Duenio d10 = new Duenio("Patty","Prosperina","0976001453", "paten@hotmail.com","Guayaquil","10","0984576123","Lopez");
+         listduenios.add(d1);
+         listduenios.add(d2);
+         listduenios.add(d3);
+         listduenios.add(d4);
+         listduenios.add(d5);
+         listduenios.add(d6);
+         listduenios.add(d7);
+         listduenios.add(d8);
+         listduenios.add(d9);
+         listduenios.add(d10);
 
-    //Scanner sc = new Scanner (System.in);
+
+    
+         //Concurso concurso = new Concurso("Amigos caninos", "10/12/2017", "14:00", "10/11/2017" , "5/12/2017","Guayaquil", "Floresta", premios, auspiciantes, "Perro", false);
+        //concursos.add(concurso);
+
+
+       //concurso vigente-abierto
+       //Concurso concurso = new Concurso("Amigos felinos", "10/12/2018", "14:00", "10/11/2018" , "5/12/2018","Guayaquil", "Floresta", premios, auspiciantes, "Perro", false);
+      //concursos.add(concurso);
+
   int seleccion = 0;
   //creo los menus para cada una de las opciones que voy a tener que elegir
   do {
@@ -101,6 +176,7 @@ class Main {
           System.out.print("\nIngrese el ID del dueño a editar: ");
           String cedula = sc.next();
           int editarDueño = 0;
+	  int contador = 1;
           for (int i=0;i<listduenios.size();i++){
             if ((listduenios.get(i).getCedula()).equals(cedula)){
               System.out.println("\n 1.Dirección");
@@ -142,7 +218,12 @@ class Main {
                 System.out.print("Se actualizo el codigo del dueño"+listduenios.get(i));
                 break;
               }
-            }
+            } else{
+		    contador++;
+	    }
+	    if (contador>listduenios.size()){
+		    System.out.println("NO SE ENCONTRO DUEÑO CON ESE ID");
+	    }
           }
           
           //aqui va el codigo de lo que tiene que pasar para editar al dueño
