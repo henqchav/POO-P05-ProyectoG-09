@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.avancep.AdministrarMascotaController">
+   <children>
+      <Label prefHeight="37.0" prefWidth="297.0" text="ADMINISTRAR MASCOTAS">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Label>
+      <TableView fx:id="fx_table" prefHeight="211.0" prefWidth="460.0">
+        <columns>
+          <TableColumn prefWidth="51.0" text="ID" />
+          <TableColumn prefWidth="113.0" text="NOMBRE" />
+            <TableColumn prefWidth="96.0" text="TIPO" />
+            <TableColumn prefWidth="170.0" text="DUEÑO" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="431.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToDescripcionMascota" text="DESCRIPCION">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToRegristrarMascota" text="REGISTRAR">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="ELIMINAR">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="fx_regresar" mnemonicParsing="false" onAction="#switchToPrincipal" text="REGRESAR">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" />
+   </padding>
+</VBox>

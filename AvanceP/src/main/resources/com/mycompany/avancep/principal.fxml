@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.avancep.PrincipalController">
+   <children>
+      <Label text="U ´ᴥ` U--FUNDACION AMIGOS PELUDOS EC --ฅ^•ﻌ•^ฅ" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="429.0">
+         <children>
+            <Button fx:id="fx_concurso" mnemonicParsing="false" onAction="#switchToAdministrarConsurso" prefHeight="40.0" prefWidth="185.0" text="ADMINISTRAR CONCURSOS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="429.0">
+         <children>
+            <Button fx:id="fx_owner" mnemonicParsing="false" onAction="#switchToAdministrarDueño" prefHeight="40.0" prefWidth="185.0" text="ADMINISTRAR DUEÑOS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="51.0" prefWidth="429.0">
+         <children>
+            <Button fx:id="fx_mascotas" mnemonicParsing="false" onAction="#switchToAdministrarMascota" prefHeight="40.0" prefWidth="185.0" text="ADMINISTRAR MASCOTAS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
