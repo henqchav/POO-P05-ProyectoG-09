@@ -4,9 +4,18 @@
  */
 package com.mycompany.avancep;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.util.Callback;
+import modelo.Duenio;
 /**
  *
  * @author Henry
@@ -25,5 +34,61 @@ public class AdministrarDueñoController {
     void switchToPrincipal(ActionEvent event) {
         App.switchScenes(event, "principal", 530, 261);
     }
+    
+    private void agregarOpciones() {
+
+        Callback<TableColumn<Duenio, Void>, TableCell<Duenio, Void>> cellFactory = (final TableColumn<Duenio, Void> param) -> {
+            TableCell<Duenio, Void> cell = new TableCell<Duenio, Void>() {
+                
+                @Override
+                public void updateItem(Void item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setGraphic(null);
+                    } else {
+                        //hbox para ubicar los botones
+                        HBox hbOpciones = new HBox(5);
+                        //recuperar el empleado de la fila
+                        Duenio duen = getTableView().getItems().get(getIndex());
+                        //boton editar
+                        Button btnEd = new Button("Editar");
+                        btnEd.setOnAction(e ->editarDuenios(duen));
+                        
+                        //boton eliminar
+                        Button btnEl = new Button("Eliminar");
+                       
+                        btnEl.setOnAction(e -> eliminarDuenios(duen));
+                        //se agregan botones al hbox
+                        hbOpciones.getChildren().addAll(btnEd,btnEl);
+                        //se ubica hbox en la celda
+                        setGraphic(hbOpciones);
+                    }
+                }
+            };
+            return cell;
+       
+        };
+        
+        
+    }
+    private void editarDuenios(Duenio d) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("nuevo.fxml"));//no tiene el controlador especificado
+            AgregarDueñoController ad = new AgregarDueñoController();
+
+            fxmlLoader.setController(ad);//se asigna el controlador
+
+            VBox root = (VBox) fxmlLoader.load();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    private void eliminarDuenios(Duenio d) {
+
+        System.out.println("Dueño : " + d);
+
+    }
+    
 
 }
