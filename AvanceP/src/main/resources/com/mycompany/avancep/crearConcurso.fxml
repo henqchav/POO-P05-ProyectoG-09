@@ -29,7 +29,7 @@
                   <Insets right="52.0" />
                </HBox.margin>
             </Label>
-            <ComboBox prefWidth="150.0" />
+            <ComboBox fx:id="comboMascota" prefWidth="150.0" />
          </children>
       </HBox>
       <HBox prefHeight="24.0" prefWidth="306.0">
@@ -42,7 +42,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField />
+            <TextField fx:id="nombreConcurso" />
          </children>
       </HBox>
       <HBox prefHeight="25.0" prefWidth="306.0">
@@ -55,7 +55,7 @@
                   <Insets right="80.0" />
                </HBox.margin>
             </Label>
-            <DatePicker />
+            <DatePicker fx:id="fechaConcurso" />
          </children>
       </HBox>
       <HBox prefHeight="26.0" prefWidth="306.0">
@@ -68,7 +68,7 @@
                   <Insets right="88.0" />
                </HBox.margin>
             </Label>
-            <TextField />
+            <TextField fx:id="horaConcurso" />
          </children>
       </HBox>
       <HBox prefHeight="20.0" prefWidth="306.0">
@@ -81,7 +81,7 @@
                   <Insets right="6.0" />
                </HBox.margin>
             </Label>
-            <DatePicker />
+            <DatePicker fx:id="inicioInscripcion" />
          </children>
       </HBox>
       <HBox prefHeight="19.0" prefWidth="306.0">
@@ -94,7 +94,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <DatePicker />
+            <DatePicker fx:id="cierreIncripcion" />
          </children>
       </HBox>
       <HBox prefHeight="27.0" prefWidth="306.0">
@@ -107,7 +107,7 @@
                   <Insets right="74.0" />
                </HBox.margin>
             </Label>
-            <ComboBox prefWidth="150.0" />
+            <ComboBox fx:id="ciudadConcurso" prefWidth="150.0" />
          </children>
       </HBox>
       <HBox prefHeight="21.0" prefWidth="306.0">
@@ -120,7 +120,7 @@
                   <Insets right="74.0" />
                </HBox.margin>
             </Label>
-            <TextField />
+            <TextField fx:id="lugarConcurso" />
          </children>
       </HBox>
       <HBox prefHeight="91.0" prefWidth="306.0">
@@ -133,7 +133,7 @@
                   <Insets right="45.0" />
                </HBox.margin>
             </Label>
-            <ScrollBar orientation="VERTICAL" />
+            <ScrollBar fx:id="auspiciantesConcurso" orientation="VERTICAL" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
@@ -148,26 +148,26 @@
             </Label>
             <VBox alignment="TOP_RIGHT" prefHeight="89.0" prefWidth="255.0">
                <children>
-                  <TableView prefHeight="91.0" prefWidth="193.0">
+                  <TableView fx:id="tablaPremio" prefHeight="91.0" prefWidth="193.0">
                     <columns>
-                        <TableColumn prefWidth="75.0" text="Lugar" />
-                      <TableColumn prefWidth="75.0" text="Descripción" />
-                      <TableColumn prefWidth="103.0" text="Auspiciante" />
+                        <TableColumn fx:id="lugarColum" prefWidth="75.0" text="Lugar" />
+                      <TableColumn fx:id="descripcionColum" prefWidth="75.0" text="Descripción" />
+                      <TableColumn fx:id="auspicianteColum" prefWidth="103.0" text="Auspiciante" />
                     </columns>
                   </TableView>
-                  <Button fx:id="fx_AñadirPremio" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#switchToAñadirPremio" text="Añadir Premio" />
+                  <Button fx:id="agregarPremio" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#switchToAñadirPremio" text="Añadir Premio" />
                </children>
             </VBox>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="57.0" prefWidth="306.0">
          <children>
-            <Button mnemonicParsing="false" text="Guardar">
+            <Button fx:id="guardarConcurso" mnemonicParsing="false" text="Guardar">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-              <Button fx:id="fx_regresar" onAction="#switchToAdministrarConcurso" text="Regresar">
+              <Button fx:id="regresarConcurso" onAction="#switchToAdministrarConcurso" text="Regresar">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
