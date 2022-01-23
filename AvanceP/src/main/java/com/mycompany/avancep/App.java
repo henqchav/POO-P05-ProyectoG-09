@@ -16,10 +16,15 @@ import javafx.scene.Node;
 public class App extends Application {
 
     private static Scene scene;
+    
+    public static String pathCiudades="com/mycompany/avancep/files/ciudades.csv";
+    
+    public static String pathAuspiciantes="com/mycompany/avancep/files/auspiciantes.csv";
 
+    
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("principal"), 530, 261);
+        scene = new Scene(loadFXML("principal"), 530, 500);
         stage.setScene(scene);
         stage.show();
     }

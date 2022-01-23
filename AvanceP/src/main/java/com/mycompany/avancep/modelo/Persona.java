@@ -1,4 +1,4 @@
-package modelo;
+package com.mycompany.avancep.modelo;
 
 public abstract class Persona{
   private String nombre;
@@ -7,6 +7,7 @@ public abstract class Persona{
   private String ciudad;
   private String email;
   private String codigo;
+  private int id;
   //getters
   public String getNombre(){
     return nombre;
@@ -35,13 +36,22 @@ public abstract class Persona{
   public void setEmail(String e){
 		email=e;
 	}
-  public String getCodigo(){
-    return codigo;
-  }
-  public void setCodigo(String cod){
-		codigo=cod;
-	}
+  public int getId() {
+        return id;
+    }
+
+    public void setCodigo(int id) {
+        id = id;
+    }
   //constructor de Persona
+  public Persona(String n, String d, String t, String ciu, String e, int id) {
+        this.nombre = n;
+        this.direccion = d;
+        this.telefono = t;
+        this.ciudad = ciu;
+        this.email = e;
+        this.id = id;
+    }
   public Persona(String n, String d, String t, String ciu,String e, String cod){
     this.nombre = n;
     this.direccion = d;
@@ -50,6 +60,7 @@ public abstract class Persona{
     this.email = e;
     this.codigo = cod;
   }
+  
   @Override
   public String toString(){
     return "nombre: " + nombre + "\ndirección: " + direccion + "\ntelefono: " + telefono +"\n ciudad: "+ ciudad + "\n email: "+ email + "\n codigo" + codigo;

@@ -1,4 +1,5 @@
-package modelo;
+package com.mycompany.avancep.modelo;
+
 public class Mascota{
 	private String nombre; //Nombre de la mascota
 	private String EsPerro; //es perro o gato
