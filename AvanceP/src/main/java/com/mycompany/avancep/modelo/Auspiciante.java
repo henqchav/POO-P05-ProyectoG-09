@@ -28,7 +28,7 @@ public class Auspiciante extends Persona{
   
   public static ArrayList<Auspiciante> cargarAuspiciantes(String ruta) {
         ArrayList<Auspiciante> auspiciantes = new ArrayList<>();
-        InputStream input = Ciudad.class.getClassLoader().getResourceAsStream(ruta);
+        InputStream input = Auspiciante.class.getClassLoader().getResourceAsStream(ruta);
 
         try(BufferedReader br = new BufferedReader(new InputStreamReader(input)))
          {
@@ -47,4 +47,5 @@ public class Auspiciante extends Persona{
         return auspiciantes;
     }
 
+  
 }

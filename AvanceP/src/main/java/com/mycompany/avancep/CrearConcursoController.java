@@ -80,7 +80,8 @@ public class CrearConcursoController {
     private Button regresarConcurso;
     
     ArrayList<Ciudad> ciudades= Ciudad.cargarCiudades(App.pathCiudades);
-    ArrayList<Auspiciante> auspiciantess= Auspiciante.cargarAuspiciantes(App.pathAuspiciantes);
+    
+    //ArrayList<Auspiciante> auspiciantess= Auspiciante.cargarAuspiciantes(App.pathAuspiciantes);
     
     //Hacemos un observable para listar los auspiciantes
     ObservableList<String> auspiciantes = FXCollections.observableArrayList();
@@ -99,13 +100,8 @@ public class CrearConcursoController {
             cmbCiudadConcurso.getItems().add(c.getNombre());
         }
         
-        for(Auspiciante aus: auspiciantess){
-            auspiciantes.add(aus.getNombre());
-        }
+       
         
-        for(String aus: auspiciantes){
-            System.out.println(aus);;
-        }
         
         //auspiciantesConcurso.setItems(auspiciantes);
         

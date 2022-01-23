@@ -46,7 +46,7 @@ public class AdministrarConcursoController {
    
     @FXML
     void switchToCrearConcurso(ActionEvent event) {
-        App.switchScenes(event, "crearConcurso", 423, 691);
+        App.switchScenes(event, "crearConcurso", 423, 750);
     }
 
     @FXML
