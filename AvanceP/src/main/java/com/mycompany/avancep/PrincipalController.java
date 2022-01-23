@@ -34,6 +34,10 @@ public class PrincipalController {
 
     @FXML
     void switchToAdministrarMascota(ActionEvent event) {
-        App.switchScenes(event, "administrarMascota", 500, 400); 
+        App.switchScenes(event, "administrarMascota", 650, 400); 
+    }
+    @FXML
+    void switchToAdministrarAuspiciantes(ActionEvent event) {
+        App.switchScenes(event, "administrarAuspiciantes", 600, 400); 
     }
 }
