@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="340.0" prefWidth="470.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.avancep.DescripcionMascotaController">
+<VBox alignment="CENTER" prefHeight="340.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label prefHeight="37.0" prefWidth="297.0" text="DESCRIPCION MASCOTA">
          <font>
@@ -17,11 +17,11 @@
          <VBox.margin>
             <Insets />
          </VBox.margin></Label>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox prefHeight="150.0" prefWidth="575.0">
          <children>
-            <VBox prefHeight="100.0" prefWidth="238.0">
+            <VBox prefHeight="150.0" prefWidth="325.0">
                <children>
-                  <HBox prefHeight="28.0" prefWidth="231.0">
+                  <HBox prefHeight="28.0" prefWidth="305.0">
                      <children>
                         <Label text="NOMBRE:  ">
                            <HBox.margin>
@@ -36,7 +36,7 @@
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="28.0" prefWidth="231.0">
+                  <HBox prefHeight="27.0" prefWidth="328.0">
                      <children>
                         <Label text="FECHA DE NACIMIENTO:  ">
                            <font>
@@ -59,7 +59,7 @@
                   </HBox>
                   <HBox prefHeight="28.0" prefWidth="231.0">
                      <children>
-                        <Label text="DUEÑO:  ">
+                        <Label prefHeight="17.0" prefWidth="77.0" text="DUEÑO:  ">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font></Label>
@@ -74,11 +74,11 @@
             <ImageView fx:id="fx_foto" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
-      <HBox prefHeight="42.0" prefWidth="430.0">
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="74.0">
          <children>
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToAdministrarMascota" prefHeight="33.0" prefWidth="89.0" style="-fx-background-color: #98fb98;" text="REGRESAR">
                <HBox.margin>
-                  <Insets left="165.0" right="20.0" top="10.0" />
+                  <Insets />
                </HBox.margin>
             </Button>
          </children>
@@ -88,4 +88,3 @@
       <Insets bottom="20.0" left="20.0" right="20.0" />
    </padding>
 </VBox>
-
