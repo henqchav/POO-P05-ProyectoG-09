@@ -11,7 +11,7 @@
 <VBox alignment="CENTER" prefHeight="333.0" prefWidth="558.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.avancep.AdministrarConcursoController">
    <children>
       <Label prefHeight="18.0" prefWidth="134.0" text="Administrar Concurso" />
-      <TableView prefHeight="194.0" prefWidth="276.0">
+      <TableView fx:id="tablaAdminConcurso" prefHeight="194.0" prefWidth="276.0">
         <columns>
           <TableColumn fx:id="codigoAdminConcurso" prefWidth="75.0" text="Codigo" />
           <TableColumn fx:id="nombreAdminConcurso" prefWidth="75.0" text="Nombre" />

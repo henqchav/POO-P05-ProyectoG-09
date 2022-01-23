@@ -7,15 +7,30 @@ package com.mycompany.avancep;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author Henry
  */
 public class PremioController {
+    
     @FXML
-    private Button fx_regresar;
-
+    private TextField lugarPremio;
+    
+    @FXML
+    private TextField descripcionPremio;
+    
+    @FXML
+    private ComboBox auspiciantePremio;
+    
+    @FXML
+    private Button guardarPremio;
+    
+    @FXML
+    private Button regresarPremio;
+    
     @FXML
     void switchToCrearConcurso(ActionEvent event) {
         App.switchScenes(event, "crearConcurso", 423, 691);

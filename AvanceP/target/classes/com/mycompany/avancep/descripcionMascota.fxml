@@ -74,9 +74,9 @@
             <ImageView fx:id="fx_foto" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
-      <HBox prefHeight="44.0" prefWidth="431.0">
+      <HBox prefHeight="42.0" prefWidth="430.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToAdministrarMascota" text="REGRESAR">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToAdministrarMascota" prefHeight="33.0" prefWidth="89.0" style="-fx-background-color: #98fb98;" text="REGRESAR">
                <HBox.margin>
                   <Insets left="165.0" right="20.0" top="10.0" />
                </HBox.margin>
@@ -88,3 +88,4 @@
       <Insets bottom="20.0" left="20.0" right="20.0" />
    </padding>
 </VBox>
+

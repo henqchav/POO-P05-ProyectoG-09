@@ -1,4 +1,5 @@
-package modelo;
+package com.mycompany.avancep.modelo;
+
 public class Duenio extends Persona{
   private String cedula;
   private String apellido;

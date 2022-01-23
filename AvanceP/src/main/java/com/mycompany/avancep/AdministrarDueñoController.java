@@ -4,6 +4,7 @@
  */
 package com.mycompany.avancep;
 
+
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,7 +16,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
-import modelo.Duenio;
+
+import com.mycompany.avancep.modelo.*;
 /**
  *
  * @author Henry

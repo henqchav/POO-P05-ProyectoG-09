@@ -64,18 +64,18 @@
       <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="510.0">
          <children>
             <Label text="FOTO:                       " />
-            <Button fx:id="btn_IV" mnemonicParsing="false" onAction="#buscarArchivo" text="Buscar Foto" />
+            <Button fx:id="btn_IV" mnemonicParsing="false" onAction="#buscarArchivo" style="-fx-background-color: #98fb98;" text="Buscar Foto" />
             <ImageView fx:id="IV" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="450.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToAdministrarMascota" text="REGRESAR">
+            <Button mnemonicParsing="false" onAction="#switchToAdministrarMascota" style="-fx-background-color: #98fb98;" text="REGRESAR">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="GUARDAR" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #98fb98;" text="GUARDAR" />
          </children>
       </HBox>
     </children>

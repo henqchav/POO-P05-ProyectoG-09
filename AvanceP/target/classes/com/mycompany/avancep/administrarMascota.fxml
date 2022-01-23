@@ -28,22 +28,22 @@
       </TableView>
       <HBox alignment="CENTER" prefHeight="44.0" prefWidth="431.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToDescripcionMascota" text="DESCRIPCION">
+            <Button mnemonicParsing="false" onAction="#switchToDescripcionMascota" style="-fx-background-color: #98fb98;" text="DESCRIPCION">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#switchToRegristrarMascota" text="REGISTRAR">
+            <Button mnemonicParsing="false" onAction="#switchToRegristrarMascota" style="-fx-background-color: #98fb98;" text="REGISTRAR">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="ELIMINAR">
+            <Button mnemonicParsing="false" style="-fx-background-color: #98fb98;" text="ELIMINAR">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button fx:id="fx_regresar" mnemonicParsing="false" onAction="#switchToPrincipal" text="REGRESAR">
+            <Button fx:id="fx_regresar" mnemonicParsing="false" onAction="#switchToPrincipal" style="-fx-background-color: #98fb98;" text="REGRESAR">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>

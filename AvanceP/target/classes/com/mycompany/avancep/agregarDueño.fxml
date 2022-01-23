@@ -26,7 +26,7 @@
                   <Insets right="52.0" />
                </HBox.margin>
             </Label>
-            <TextArea prefHeight="37.0" prefWidth="258.0" />
+            <TextArea fx:id="nombreDueno" prefHeight="37.0" prefWidth="258.0" />
          </children>
       </HBox>
       <HBox prefHeight="24.0" prefWidth="306.0">

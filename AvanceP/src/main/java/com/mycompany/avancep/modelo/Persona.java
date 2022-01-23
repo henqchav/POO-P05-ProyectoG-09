@@ -1,4 +1,4 @@
-package modelo;
+package com.mycompany.avancep.modelo;
 
 public abstract class Persona{
   private String nombre;
