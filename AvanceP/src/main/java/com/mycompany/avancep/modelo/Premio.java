@@ -5,19 +5,26 @@
  */
 package com.mycompany.avancep.modelo;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 /**
  *
  * @author linco
  */
 public class Premio {
     private String nivel;//1ro, 2do o 3ro 
-    private float monto;
-    private String adicional;//son productos de comidas
+    private String descripcion;
+    private String auspiciante;//son productos de comidas
+    
 
-    public Premio(String nivel, float monto, String adicional) {
+    public Premio(String nivel, String descripcion, String adicional) {
         this.nivel = nivel;
-        this.monto = monto;
-        this.adicional = adicional;
+        this.descripcion = descripcion;
+        this.auspiciante = adicional;
     }
 
     public String getNivel() {
@@ -28,28 +35,50 @@ public class Premio {
         this.nivel = nivel;
     }
 
-    public float getMonto() {
-        return monto;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setMonto(float monto) {
-        this.monto = monto;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public String getAdicional() {
-        return adicional;
+    public String getAuspiciante() {
+        return auspiciante;
     }
 
-    public void setAdicional(String adicional) {
-        this.adicional = adicional;
+    public void setAuspiciante(String auspiciante) {
+        this.auspiciante = auspiciante;
     }
 
     @Override
     public String toString() {
-        return nivel + " del Premio:  monto=" + monto + ", adicional=" + adicional;
+        return "Premio{" + "nivel=" + nivel + ", descripcion=" + descripcion + ", auspiciante=" + auspiciante + '}';
     }
 
+    public String escribirLinea(){
+        return nivel + "," + descripcion + "," + auspiciante;
+    }
+    
+    public static ArrayList<Premio> cargarPremios(String ruta) {
+        ArrayList<Premio> premios = new ArrayList<>();
+        InputStream input = Premio.class.getClassLoader().getResourceAsStream(ruta);
 
-    
-    
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(input)))
+         {
+            String line = br.readLine();
+            while (line != null) {
+                System.out.println(line);
+                String[] datos = line.split(",");
+                Premio p = new Premio(datos[0], datos[1], datos[2]);
+                System.out.println("Premio" + p);
+                premios.add(p);
+                line = br.readLine();
+            }
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        } 
+        return premios;
+    }
 }

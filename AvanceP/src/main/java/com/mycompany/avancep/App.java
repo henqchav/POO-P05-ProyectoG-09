@@ -21,6 +21,7 @@ public class App extends Application {
     
     public static String pathAuspiciantes="com/mycompany/avancep/files/auspiciantes.csv";
 
+    public static String pathPremios="com/mycompany/avancep/files/premios.csv";
     
     @Override
     public void start(Stage stage) throws IOException {
