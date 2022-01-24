@@ -1,12 +1,13 @@
 package com.mycompany.modelo;
 
+import com.mycompany.avancep.modelo.Persona;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import com.mycompany.modelo.Persona;
+
 import java.io.FileInputStream;
 
 public class Auspiciante extends Persona {

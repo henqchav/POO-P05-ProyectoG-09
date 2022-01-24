@@ -5,8 +5,9 @@
 package com.mycompany.avancep;
 
 import com.mycompany.avancep.modelo.Animal;
-import com.mycompany.avancep.modelo.Auspiciante;
 import com.mycompany.avancep.modelo.Ciudad;
+import com.mycompany.avancep.modelo.Premio;
+import com.mycompany.avancep.modelo.Auspiciante;
 import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +22,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  *
@@ -59,16 +61,17 @@ public class CrearConcursoController {
     private ListView<String> auspiciantesConcurso;
     
     @FXML
-    private TableView tablaPremio;
+    private TableView<Premio> tablaPremio;
     
     @FXML
-    private TableColumn lugarColum;
+    private TableColumn<Premio,String> lugarColum;
     
     @FXML
-    private TableColumn descripcionColum;
+    private TableColumn<Premio,String> descripcionColum;
     
     @FXML
-    private TableColumn auspicianteColum;
+    private TableColumn<Premio,String> auspicianteColum;
+    
     
     @FXML
     private Button agregarPremio;
@@ -80,8 +83,7 @@ public class CrearConcursoController {
     private Button regresarConcurso;
     
     ArrayList<Ciudad> ciudades= Ciudad.cargarCiudades(App.pathCiudades);
-    
-    //ArrayList<Auspiciante> auspiciantess= Auspiciante.cargarAuspiciantes(App.pathAuspiciantes);
+    ArrayList<Auspiciante> auspiciantess= Auspiciante.cargarAuspiciantes(App.pathAuspiciantes);
     
     //Hacemos un observable para listar los auspiciantes
     ObservableList<String> auspiciantes = FXCollections.observableArrayList();
@@ -95,16 +97,27 @@ public class CrearConcursoController {
         comboMascota.getItems().setAll(Animal.values());
         comboMascota.setValue(Animal.PERRO);
         System.out.println("combobox inicializado");
-               
+              
         for(Ciudad c: ciudades){
             cmbCiudadConcurso.getItems().add(c.getNombre());
         }
         
-       
+        for(Auspiciante aus: auspiciantess){
+            auspiciantes.add(aus.getNombre());
+        }
         
+        for(String aus: auspiciantes){
+            System.out.println(aus);;
+        }
         
-        //auspiciantesConcurso.setItems(auspiciantes);
+        auspiciantesConcurso.setItems(auspiciantes);
         
+        //para la tabla viewde premio
+        lugarColum.setCellValueFactory(new PropertyValueFactory<>("nivel"));
+        descripcionColum.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
+        //auspicianteColum.setCellValueFactory(new PropertyValueFactory<>("auspiciante"));
+
+        tablaPremio.getItems().setAll(Premio.cargarPremios(App.pathPremios));
     }
     
     @FXML
@@ -116,4 +129,5 @@ public class CrearConcursoController {
     void switchToAñadirPremio(ActionEvent event) {
         App.switchScenes(event, "premio", 332, 261);
     }
+
 }
