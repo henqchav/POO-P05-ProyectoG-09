@@ -7,9 +7,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import modelo.Animal;
-import modelo.Duenio;
-import modelo.Mascota;
+import com.mycompany.avancep.modelo.*;
+//import modelo.Animal;
+//import modelo.Duenio;
+//import modelo.Mascota;
 
 public class DescripcionMascotaController {
 

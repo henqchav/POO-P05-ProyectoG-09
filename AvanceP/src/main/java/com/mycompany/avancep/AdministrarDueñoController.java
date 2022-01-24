@@ -18,24 +18,47 @@ import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
 import com.mycompany.avancep.modelo.*;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.scene.control.TableView;
 /**
  *
  * @author Henry
  */
 public class AdministrarDueñoController {
+    @FXML
+    TableView<Duenio> tv_Duenios; 
+    @FXML
+    private TableColumn<Duenio, Integer> col_ID;
+    @FXML
+    private TableColumn<Duenio, String> col_Nombre;
+    @FXML
+    private TableColumn<Duenio, String> col_Apellido;
+    @FXML
+    private TableColumn<Duenio, String> col_Telefono;
+    @FXML
+    private TableColumn<Duenio, String> col_Ciudad;
+    
      @FXML
     private Button fx_registrar;
 
     @FXML
     private Button primaryButton;
+    
+    
+    
+    
     @FXML
-    void switchtoAgregarDueño(ActionEvent event) {
-         App.switchScenes(event, "agregarDueño", 523, 470);
+    private void initialize(){
+        col_ID.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getId()));
+        col_Nombre.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getNombre()));
+        col_Apellido.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getApellido()));
+        col_Telefono.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getTelefono()));
+        col_Ciudad.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getCiudad()));
+        
+        tv_Duenios.getItems().setAll(Duenio.cargarDuenios());
+        
     }
-    @FXML
-    void switchToPrincipal(ActionEvent event) {
-        App.switchScenes(event, "principal", 530, 261);
-    }
+    
     
     private void agregarOpciones() {
 
@@ -90,6 +113,15 @@ public class AdministrarDueñoController {
 
         System.out.println("Dueño : " + d);
 
+    }
+    
+    @FXML
+    void switchtoAgregarDueño(ActionEvent event) {
+         App.switchScenes(event, "agregarDueño", 523, 470);
+    }
+    @FXML
+    void switchToPrincipal(ActionEvent event) {
+        App.switchScenes(event, "principal", 530, 261);
     }
     
 

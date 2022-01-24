@@ -1,14 +1,13 @@
 package com.mycompany.avancep.modelo;
 
-<<<<<<< HEAD
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-=======
->>>>>>> dc78a5d5c711f77c4559e6ddb93bcf089f7ca311
+
 public class Duenio extends Persona{
   private String cedula;
   private String apellido;

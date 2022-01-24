@@ -25,10 +25,11 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
-import modelo.Duenio;
-import modelo.Mascota;
-import utils.DuenioConverter;
-import modelo.Animal;
+import com.mycompany.avancep.modelo.*;
+//import modelo.Duenio;
+//import modelo.Mascota;
+//import utils.DuenioConverter;
+//import modelo.Animal;
 
 /**
  *
