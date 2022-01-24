@@ -12,9 +12,13 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 /**
  *
@@ -41,16 +45,33 @@ public class AgregarDueñoController {
     private TextArea txttelefono;
     
     @FXML
-    private ComboBox<String> cmbCiudadConcurso;
-    
+    private ComboBox<Ciudad> cmbCiudadConcurso;
+    @FXML
+    private ComboBox<String> cmbCiudad;
     ArrayList<Ciudad> ciudades= Ciudad.cargarCiudades(App.pathCiudades);
     
     
     private void initialize() {
         for(Ciudad c: ciudades){
-            cmbCiudadConcurso.getItems().add(c.getNombre());
+            cmbCiudad.getItems().add(c.getNombre());
         }
-       }
+    }
+    
+    public void llenarCombo(ArrayList<Ciudad> ciudades){
+        cmbCiudadConcurso.getItems().addAll(ciudades);
+    }
+    
+    public void llenarCampos(Duenio d) {
+        txtnombres.setText(d.getNombre());
+        txtapellidos.setText(d.getApellido());
+        txtdireccion.setText(d.getDireccion());
+        txttelefono.setText(d.getTelefono());
+        cmbCiudadConcurso.setValue(Ciudad.getCiudadbyName(d.getCiudad()));
+        txtemail.setText(d.getEmail());
+        txtnombres.setDisable(true);
+        txtemail.setDisable(true);
+    }
+    
     
     public void guardarDuenio(){
         ArrayList<Duenio> duenios = Duenio.cargarDuenios();
@@ -73,6 +94,8 @@ public class AgregarDueñoController {
         }
         
     }
+    
+
 
     @FXML
     void switchToAdministarDueño(ActionEvent event) {
